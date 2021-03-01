@@ -6,7 +6,7 @@
 - gelb: GPS-Cortex
     - GPS-Antenne
     - Power
-    - Sensors MNEA 0183
+    - Sensors NMEA 0183
     - VHF
 - blau: Raymarine
     - RF-Base
@@ -37,7 +37,7 @@
 ## Things
 - Braunes Kabel ist Audio mit blau = plus und braun minus (geht nicht)
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
-- NMEA zur Seatalk - EMEA Converter legen?
+- NMEA zur Seatalk - NMEA Converter legen?
 - Woher kommen welche Sensordaten und wohin fließen sie?
 
 ## Datenflüsse
