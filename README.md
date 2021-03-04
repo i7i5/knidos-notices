@@ -30,15 +30,17 @@
 ## GPS - System
 - NMEA 0183, Orange und Schwarz werden nach hinten in einem grauen Kabel zum Plotter gerootet.
     - mappinng: orange|weiß, schwarz|grün
+- Audio Außenlautsprecher rot = plus, scharz = minus
+    - Kabel zum Lautsprecher blau = minus und braun = plus [ACHTUNG!]
 
 ## Navtex
 - Multiklemme liefert Daten für Navtex Receiver
 
 ## Things
-- Braunes Kabel ist Audio mit blau = plus und braun minus (geht nicht)
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
-- NMEA zur Seatalk - NMEA Converter legen?
-- Woher kommen welche Sensordaten und wohin fließen sie?
+- Cortex: NMEA an Seatalk Bridge NMEA OUT legen -> Alle Daten vom Schiff auf Funkgerät?
+- Woher kommen welche Sensordaten und wohin fließen sie? -> Siehe Datenflussdiagramm WIP
+- Überlegung neuer Plotter: NMEA einfach an Smart Pilot NMEA OUT klemmen
 
 ## Datenflüsse
 
@@ -74,7 +76,7 @@ skinparam componentStyle rectangle
 [Cortex] as CORTEX
 
 CORTEX -down-> [Plotter]: NMEA 0183 (vml AIS)
-CORTEX -down-> [Speeker]: Audio
+CORTEX -down-> [Speeker]: Audio (blau = minus, braun = plus)
 CORTEX -down-> unknown: NMEA
 
 @enduml
