@@ -30,8 +30,8 @@
     - [out] Antriebskupplung
 - sealtalk 2 seatalk_ng
     - gelb: Seatalk 1, siehe [in/out] Seatalk 1
-    - blau: Backbone Plotter?
-    - weiß: Spurkabel Autopilot?
+    - blau: Backbone Plotter oder Autopilot?
+    - weiß: Spurkabel Strom?
 
 
 ## GPS - System
@@ -48,6 +48,7 @@
 - Cortex: NMEA an Seatalk Bridge NMEA OUT legen -> Alle Daten vom Schiff auf Funkgerät?
 - Woher kommen welche Sensordaten und wohin fließen sie? -> Siehe Datenflussdiagramm WIP
 - Überlegung neuer Plotter: NMEA einfach an Smart Pilot NMEA OUT klemmen
+- Neuer Plotter Sealtalk_ng to NMEA Kabel an seatalk 2 sealtak_ng
 
 ## Datenflüsse
 
