@@ -13,6 +13,11 @@
     - Niedergang Geräte
     - Autopilot
 
+## Legende
+- RF-Base: Station für Fernbedingung Autopilot
+- Backbone: Ein Backbone ist eine Hauptleitung. Der Backbone ist das sozusagen das Rückgrat (englisch Backbone) eines Netzwerks. Lokale Leitungen verbinden sich mit diesen zentralen Leitungen und speisen ihre Daten ein.
+- Spurkabel: Verbindet Seatalk_ng Geräte mit Backbone
+
 ## Smart Pilot
 - Steuerung des Autopiloten
 - Belegte Slots sind
@@ -23,9 +28,11 @@
     - [in/out] PWR
     - [out] Antriebsmotor
     - [out] Antriebskupplung
+- sealtalk 2 seatalk_ng
+    - gelb: Seatalk 1, siehe [in/out] Seatalk 1
+    - blau: Backbone Plotter?
+    - weiß: Spurkabel Autopilot?
 
-## Legende
-- RF-Base: Station für Fernbedingung Autopilot
 
 ## GPS - System
 - NMEA 0183, Orange und Schwarz werden nach hinten in einem grauen Kabel zum Plotter gerootet.
