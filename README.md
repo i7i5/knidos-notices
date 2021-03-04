@@ -53,40 +53,9 @@
 ## Datenflüsse
 
 ### Datenfluss Raymarine
-```plantuml
-
-@startuml sensordaten
-skinparam componentStyle rectangle
-
-[Raymarine RF-Base] as RFB
-[Raymarine Autohelm] as AUTOPLT
-[Niedergang Geräte] as NIEDERGANG
-[Autopilot Fernbedienung] as RF
-[Seatalk 2 NMEA Bride] as S2N
-[Multiklemme] as MULTI
-
-RFB -down- AUTOPLT: Seatalk
-AUTOPLT - unknown: Seatalk
-S2N -up- AUTOPLT: Seatalk
-S2N - NIEDERGANG: Seatalk
-RF - S2N: Seatalk
-S2N -down- MULTI: NMEA
-@enduml
-
-```
+[sensordaten]: datenfluss/sensordaten.png "Sensordatenfluss"
+![sensordaten]
 
 ### Cortex
-```plantuml
-
-@startuml cortex
-skinparam componentStyle rectangle
-
-[Cortex] as CORTEX
-
-CORTEX -down-> [Plotter]: NMEA 0183 (vml AIS)
-CORTEX -down-> [Speeker]: Audio (blau = minus, braun = plus)
-CORTEX -down-> unknown: NMEA
-
-@enduml
-
-```
+[cortex]: datenfluss/cortex.png "Cortex"
+![cortex]
