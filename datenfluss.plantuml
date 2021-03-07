@@ -1,4 +1,5 @@
 @startuml cortex
+skinparam shadowing false
 skinparam componentStyle rectangle
 
 [Cortex] as CORTEX
@@ -12,6 +13,7 @@ CORTEX -down-> unknown: NMEA
 -------------------------------------
 
 @startuml sensordaten
+skinparam shadowing false
 skinparam componentStyle rectangle
 
 [Raymarine RF-Base] as RFB
