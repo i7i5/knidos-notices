@@ -2,6 +2,13 @@
 ## Festlegungen
 - NMEA = NMEA 2000, NMEA 0183 wird immer explizit genannt
 
+## NMEA 0183 Kabel
+- schwarz: OUT (-)
+- grün: IN (-)
+- gelb: IN (+)
+- orange: OUT (+)
+- Gibt es korrespondierende Minusleitungen (NMEA OUT / IN -, NMEA Tx / Rx – o.ä.), verbindest Du sie ebenfalls miteinander; fehlen sie, verwendest Du ersatzweise die Masseleitung (auch, wenn sie nur auf einer Seite fehlt).
+
 ## Legende Kabelbinder
 - gelb: GPS-Cortex
     - GPS-Antenne
@@ -43,11 +50,16 @@
 ## Navtex
 - Multiklemme liefert Daten für Navtex Receiver
 
+## TODOs 16.04.-19.04
+- Baudrate für AIS einstellen, siehe manual Seite 15
+- Loudspeaker testen (Einstellung ggf in Software möglich?)
+- Sealtalk-NMEA-Interface anschließen: gelb an plus und grün an minus
+- Navtex Manual nach Frequenzen checken
+
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
 - Cortex: NMEA an Seatalk Bridge NMEA OUT legen -> Alle Daten vom Schiff auf Funkgerät?
 - Woher kommen welche Sensordaten und wohin fließen sie? -> Siehe Datenflussdiagramm WIP
-- Überlegung neuer Plotter: NMEA einfach an Smart Pilot NMEA OUT klemmen
 - Neuer Plotter Sealtalk_ng to NMEA Kabel an seatalk 2 sealtak_ng
 
 ## Datenflüsse
