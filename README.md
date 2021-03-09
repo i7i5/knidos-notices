@@ -55,6 +55,7 @@
 - Loudspeaker testen (Einstellung ggf in Software möglich?)
 - Sealtalk-NMEA-Interface anschließen: gelb an plus und grün an minus
 - Navtex Manual nach Frequenzen checken
+- Funkgerät sichern mit 2A, schauen, ob Cortex mit 10A gesichert ist
 
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
