@@ -51,11 +51,14 @@
 - Multiklemme liefert Daten für Navtex Receiver
 
 ## TODOs 16.04.-19.04
+- Funkgerät sichern mit 2A, schauen, ob Cortex mit 10A gesichert ist
 - Baudrate für AIS einstellen, siehe manual Seite 15
 - Loudspeaker testen (Einstellung ggf in Software möglich?)
-- Sealtalk-NMEA-Interface anschließen: gelb an plus und grün an minus
+- Kabel unter Skippertisch sichern
+- Kabel an Smart Pilot sicher?
+- Sealtalk-NMEA-Interface anschließen: gelb an plus und grün an minus (an NMEA 0183 Kabel)
 - Navtex Manual nach Frequenzen checken
-- Funkgerät sichern mit 2A, schauen, ob Cortex mit 10A gesichert ist
+- Dokumentation
 
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
