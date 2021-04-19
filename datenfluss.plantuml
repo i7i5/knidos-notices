@@ -22,7 +22,7 @@ skinparam componentStyle rectangle
 [Plotter] as PLOTTER
 [Smart Pilot] as SMART_PILOT
 
-CORTEX <-down-> SEATALK_NG_T: Adapterkabel SeaTalk NG auf NMEA 2000
+CORTEX <-down-> SEATALK_NG_T: Adapterkabel Seatalk_ng auf NMEA
 SEATALK_NG_T <-down-> SEATALK_NG_BRIDGE: Seatalk_ng Backbone Kabel
 SEATALK_NG_BRIDGE <-down-> PLOTTER: Seatalk_ng
 SEATALK_NG_BRIDGE <-right-> SMART_PILOT: Seatalk
