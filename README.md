@@ -40,7 +40,7 @@
 - Sealtalk 2 Seatalk_ng
     - gelb: Seatalk, siehe [in/out] Seatalk
     - blau: Backbone Plotter oder Autopilot?
-    - weiß: Spurkabel Strom?
+    - weiß: Spurkabel Strom
 
 ## Cortex - System
 - NMEA 0183, Orange und Schwarz werden nach hinten in einem grauen Kabel zum Plotter gerootet.
@@ -53,6 +53,9 @@
 
 ## Navtex
 - Multiklemme liefert Daten für Navtex Receiver
+
+## Antenne
+- Wir haben die Pacific von rr
 
 ## TODOs
 - Kabel an Smart Pilot sicher?
