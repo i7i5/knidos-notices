@@ -60,6 +60,7 @@
 ## TODOs
 - Kabel an Smart Pilot sicher?
 - Dokumentation
+test
 
 ### Einkaufsliste svb
 - 73710: PL-Stecker für RG58U Kabel: Antennenkabel zu Cortex Adapter
