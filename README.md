@@ -10,7 +10,7 @@
 - Gibt es korrespondierende Minusleitungen (NMEA OUT / IN -, NMEA Tx / Rx – o.ä.), verbindest Du sie ebenfalls miteinander; fehlen sie, verwendest Du ersatzweise die Masseleitung (auch, wenn sie nur auf einer Seite fehlt).
 
 ## Legende Kabelbinder
-- gelb: GPS-Cortex
+- gelb: Cortex
     - GPS-Antenne
     - Power
     - Sensors NMEA 0183
@@ -19,6 +19,8 @@
     - RF-Base
     - Niedergang Geräte
     - Autopilot
+- rot: Delta M22 Antenne
+- rot rot: Delta 900S Antenne
 
 ## Legende
 - RF-Base: Station für Fernbedingung Autopilot
@@ -35,43 +37,54 @@
     - [in/out] PWR
     - [out] Antriebsmotor
     - [out] Antriebskupplung
-- sealtalk 2 seatalk_ng
-    - gelb: Seatalk 1, siehe [in/out] Seatalk 1
+- Sealtalk 2 Seatalk_ng
+    - gelb: Seatalk, siehe [in/out] Seatalk
     - blau: Backbone Plotter oder Autopilot?
     - weiß: Spurkabel Strom?
 
-
-## GPS - System
+## Cortex - System
 - NMEA 0183, Orange und Schwarz werden nach hinten in einem grauen Kabel zum Plotter gerootet.
-    - mappinng: orange|weiß, schwarz|grün
+    - mappinng: weiß|weiß, schwarz|grün (gnd)
 - Audio Außenlautsprecher rot = plus, scharz = minus
     - Kabel zum Lautsprecher blau = minus und braun = plus [ACHTUNG!]
+    - Lautsprecher lässt sich über Handheld steuern
+- NMEA 0183 scheint nur Output zu sein, NMEA 2000 input/output
+- Sealtalk-NMEA-Interface anschließen: gelb an gelb und grün an grün (an NMEA 0183 Kabel) [NOT_WORKING]
 
 ## Navtex
 - Multiklemme liefert Daten für Navtex Receiver
 
-## TODOs 16.04.-19.04
-- Funkgerät sichern mit 2A, schauen, ob Cortex mit 10A gesichert ist
-- Baudrate für AIS einstellen, siehe manual Seite 15
-- Loudspeaker testen (Einstellung ggf in Software möglich?)
-- Kabel unter Skippertisch sichern
+## TODOs
 - Kabel an Smart Pilot sicher?
-- Sealtalk-NMEA-Interface anschließen: gelb an plus und grün an minus (an NMEA 0183 Kabel)
-- Navtex Manual nach Frequenzen checken
 - Dokumentation
+
+### Einkaufsliste svb
+- 73710: PL-Stecker für RG58U Kabel: Antennenkabel zu Cortex Adapter
+- 98564: Seatalk NG Backbone Kabel 9m : Seatalk 2 Sealtalk_ng Bridge zu T-Adapter
+- 98571: SeaTalk NG T-Stück : Verbindung Backbonekabel zu Cortex
+- 60707: Adapterkabel SeaTalk NG auf NMEA 2000 female : Kabel von T-Stück zu Cortex
+- 95507: BNC-BNC Verbindungskabel : Cortex Splitter zu AV-Box
+- BNC-Koax Adapter für Radio
 
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
-- Cortex: NMEA an Seatalk Bridge NMEA OUT legen -> Alle Daten vom Schiff auf Funkgerät?
 - Woher kommen welche Sensordaten und wohin fließen sie? -> Siehe Datenflussdiagramm WIP
-- Neuer Plotter Sealtalk_ng to NMEA Kabel an seatalk 2 sealtak_ng
+
 
 ## Datenflüsse
 
+### Antennennetzwerk
+[antenna_network]: datenfluss/antenna_network.png "Antennennetzwerk"
+![antenna_network]
+
 ### Datenfluss Raymarine
-[sensordaten]: datenfluss/sensordaten.png "Sensordatenfluss"
-![sensordaten]
+[sensordata]: datenfluss/sensordata.png "Sensordatenfluss"
+![sensordata]
 
 ### Cortex
 [cortex]: datenfluss/cortex.png "Cortex"
 ![cortex]
+
+### Cortex Netzwerk (upcomming)
+[cortex_network]: datenfluss/cortex_network.png "Cortex Netzwerk"
+![cortex_network]

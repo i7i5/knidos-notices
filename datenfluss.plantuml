@@ -1,33 +1,80 @@
-@startuml cortex
+@startuml cortex_now
 skinparam shadowing false
 skinparam componentStyle rectangle
 
 [Cortex] as CORTEX
 
-CORTEX -down-> [Plotter]: NMEA 0183 (vml AIS)
+CORTEX -down-> [Plotter]: NMEA 0183 (AIS)
 CORTEX -down-> [Speeker]: Audio (blau = minus, braun = plus)
-CORTEX -down-> unknown: NMEA
 
 @enduml
 
 -------------------------------------
 
-@startuml sensordaten
+@startuml cortex_network
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+[Cortex] as CORTEX
+[Seatalk NG T-Stück] as SEATALK_NG_T
+[Sealtalk 2 Seatalk_ng Bridge (bei Smart Pilot)] as SEATALK_NG_BRIDGE
+[Seatalk Geräte/Sensoren] as SEATALK_CONSUMER_PROVIDER
+[Plotter] as PLOTTER
+[Smart Pilot] as SMART_PILOT
+
+CORTEX <-down-> SEATALK_NG_T: Adapterkabel SeaTalk NG auf NMEA 2000
+SEATALK_NG_T <-down-> SEATALK_NG_BRIDGE: Seatalk_ng Backbone Kabel
+SEATALK_NG_BRIDGE <-down-> PLOTTER: Seatalk_ng
+SEATALK_NG_BRIDGE <-right-> SMART_PILOT: Seatalk
+
+CORTEX <-right-> SEATALK_CONSUMER_PROVIDER: NMEA 0183
+
+@enduml
+
+-------------------------------------
+
+@startuml antenna_network
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+[Cortex] as CORTEX
+[AV 205] as AV_205
+[AV 302] as AV_302
+[Radio] as RADIO
+[Navtex] as NAVTEX
+[Antenne] as ANTENNA
+
+ANTENNA <-right-> CORTEX: RG58U
+CORTEX -down-> AV_205: BNC (case 1, pref)
+AV_205 -down-> RADIO: BNC to Koax
+AV_205 -right-> NAVTEX: BNC
+
+
+CORTEX -right-> AV_302: BNC (case 2)
+AV_302 -down-> AV_205: BNC
+
+@enduml
+
+-------------------------------------
+
+@startuml sensordata
 skinparam shadowing false
 skinparam componentStyle rectangle
 
 [Raymarine RF-Base] as RFB
-[Raymarine Autohelm] as AUTOPLT
+[Raymarine Autohelm an Skippertisch] as AUTOPLT
 [Niedergang Geräte] as NIEDERGANG
 [Autopilot Fernbedienung] as RF
 [Seatalk 2 NMEA Bride] as S2N
 [Multiklemme] as MULTI
+[Navtex] as NAVTEX
 
 RFB -down- AUTOPLT: Seatalk
 AUTOPLT - unknown: Seatalk
 S2N -up- AUTOPLT: Seatalk
 S2N - NIEDERGANG: Seatalk
 RF - S2N: Seatalk
-S2N -down- MULTI: NMEA
+S2N -down- MULTI: NMEA 0183
+MULTI -right- NAVTEX: Datenbus
 
 @enduml
