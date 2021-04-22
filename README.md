@@ -27,6 +27,9 @@
 - Backbone: Ein Backbone ist eine Hauptleitung. Der Backbone ist das sozusagen das Rückgrat (englisch Backbone) eines Netzwerks. Lokale Leitungen verbinden sich mit diesen zentralen Leitungen und speisen ihre Daten ein.
 - Spurkabel: Verbindet Seatalk_ng Geräte mit Backbone
 
+## Neuer Sicherungskasten
+- 1: Cortex Handheld: 2A
+
 ## Smart Pilot
 - Steuerung des Autopiloten
 - Belegte Slots sind
@@ -72,6 +75,12 @@
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
 - Woher kommen welche Sensordaten und wohin fließen sie? -> Siehe Datenflussdiagramm WIP
+
+## Schalter
+
+### Außen
+[outside_switches]: media/outside_switches.png "Schalter außen"
+![outside_switches]
 
 
 ## Datenflüsse
