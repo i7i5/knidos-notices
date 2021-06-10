@@ -64,6 +64,10 @@
 - Kabel an Smart Pilot sicher?
 - Dokumentation
 
+## TODOs 18. - 20.
+- Spannung Konverterkit mit 5A sichern
+
+
 ### Einkaufsliste svb
 - 73710: PL-Stecker für RG58U Kabel: Antennenkabel zu Cortex Adapter
 - 98564: Seatalk NG Backbone Kabel 9m : Seatalk 2 Sealtalk_ng Bridge zu T-Adapter
