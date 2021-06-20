@@ -1,33 +1,20 @@
-@startuml cortex_now
-skinparam shadowing false
-skinparam componentStyle rectangle
-
-[Cortex] as CORTEX
-
-CORTEX -down-> [Plotter]: NMEA 0183 (AIS)
-CORTEX -down-> [Speeker]: Audio (blau = minus, braun = plus)
-
-@enduml
-
--------------------------------------
-
 @startuml cortex_network
 skinparam shadowing false
 skinparam componentStyle rectangle
 
 [Cortex] as CORTEX
-[Seatalk NG T-Stück] as SEATALK_NG_T
-[Sealtalk 2 Seatalk_ng Bridge (bei Smart Pilot)] as SEATALK_NG_BRIDGE
-[Seatalk Geräte/Sensoren] as SEATALK_CONSUMER_PROVIDER
+[Seatalk_ng Bridge] as SEATALK_NG_BRIDGE_C
+[Seatalk_ng Bridge (bei Smart Pilot)] as SEATALK_NG_BRIDGE
 [Plotter] as PLOTTER
 [Smart Pilot] as SMART_PILOT
+[Sensordaten (upcomming)] as SENSOR_DATA
 
-CORTEX <-down-> SEATALK_NG_T: Adapterkabel Seatalk_ng auf NMEA
-SEATALK_NG_T <-down-> SEATALK_NG_BRIDGE: Seatalk_ng Backbone Kabel
+CORTEX <-down-> SEATALK_NG_BRIDGE_C: Adapterkabel Seatalk_ng auf NMEA
+SEATALK_NG_BRIDGE_C <-down-> SEATALK_NG_BRIDGE: Seatalk_ng Backbone Kabel
+SEATALK_NG_BRIDGE_C <-right-> SENSOR_DATA: Sealtak
 SEATALK_NG_BRIDGE <-down-> PLOTTER: Seatalk_ng
 SEATALK_NG_BRIDGE <-right-> SMART_PILOT: Seatalk
-
-CORTEX <-right-> SEATALK_CONSUMER_PROVIDER: NMEA 0183
+CORTEX -right-> [Speeker]: Audio (blau = minus, braun = plus)
 
 @enduml
 

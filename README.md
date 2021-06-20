@@ -63,9 +63,9 @@
 ## TODOs
 - Kabel an Smart Pilot sicher?
 - Dokumentation
-
-## TODOs 18. - 20.
-- Spannung Konverterkit mit 5A sichern
+- Antenne direkt an Funktgerät anschließen
+- Sensordaten auf Bridge bei Cortex legen
+- Daten zur Seltalkbridge in Skippertisch mit Klemmen überarbeiten, sodass nur 1 Input
 
 
 ### Einkaufsliste svb
@@ -97,10 +97,6 @@
 [sensordata]: datenfluss/sensordata.png "Sensordatenfluss"
 ![sensordata]
 
-### Cortex
-[cortex]: datenfluss/cortex.png "Cortex"
-![cortex]
-
-### Cortex Netzwerk (upcomming)
+### Cortex Netzwerk
 [cortex_network]: datenfluss/cortex_network.png "Cortex Netzwerk"
 ![cortex_network]
