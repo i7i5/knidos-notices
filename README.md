@@ -61,20 +61,16 @@
 - Wir haben die Pacific von rr
 
 ## TODOs
-- Kabel an Smart Pilot sicher?
-- Dokumentation
 - Antenne direkt an Funktgerät anschließen
-- Sensordaten auf Bridge bei Cortex legen
-- Daten zur Seltalkbridge in Skippertisch mit Klemmen überarbeiten, sodass nur 1 Input
+- Sensordaten
+    - Ursprung Seatalk 1 Kabel an Smartpilot ausmachen
+    - Sensordaten verfolgen (Logge, Anemomenter) - gibt es eine Masteranzeige?!
+    - Sensordaten auf Bridge bei Cortex legen und ggf. Seatalk 1 Kabel zu Smart pilot entfernen
+    - Welche Anschlüsse haben die Sensoren und wie werden sie in Seatalk umgewandelt
+- Sind alle Antennen funktionstüchtig? - Anschlüsse, lose Verbindungen?
+- Niedergangverkleidung abbauen und Verkabelung in Ordnung bringen
+- LED Strip anbringen
 
-
-### Einkaufsliste svb
-- 73710: PL-Stecker für RG58U Kabel: Antennenkabel zu Cortex Adapter
-- 98564: Seatalk NG Backbone Kabel 9m : Seatalk 2 Sealtalk_ng Bridge zu T-Adapter
-- 98571: SeaTalk NG T-Stück : Verbindung Backbonekabel zu Cortex
-- 60707: Adapterkabel SeaTalk NG auf NMEA 2000 female : Kabel von T-Stück zu Cortex
-- 95507: BNC-BNC Verbindungskabel : Cortex Splitter zu AV-Box
-- BNC-Koax Adapter für Radio
 
 ## Things
 - 3 pending GPS-Kabel eines nach hinten, eines der Pilz vorne?
