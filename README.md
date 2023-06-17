@@ -22,6 +22,13 @@
 - rot: Delta M22 Antenne
 - rot rot: Delta 900S Antenne
 
+## Legen Kabelbinder Mast
+- schwarz: ground
+- rot: steam light
+- blau: deck flood
+- gelb: ancore
+- grün: windex
+
 ## Legende
 - RF-Base: Station für Fernbedingung Autopilot
 - Backbone: Ein Backbone ist eine Hauptleitung. Der Backbone ist das sozusagen das Rückgrat (englisch Backbone) eines Netzwerks. Lokale Leitungen verbinden sich mit diesen zentralen Leitungen und speisen ihre Daten ein.
